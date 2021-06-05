@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/listFolderFragment">
+    <fragment
+        android:id="@+id/listFolderFragment"
+        android:name="com.istody.simulei.ui.fragment.ListFolderFragment"
+        android:label="fragment_list_folder"
+        tools:layout="@layout/fragment_list_folder" >
+        <action
+            android:id="@+id/action_listFolderFragment_to_listExamFragment"
+            app:destination="@id/listExamFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listExamFragment"
+        android:name="com.istody.simulei.ui.fragment.ListExamFragment"
+        android:label="fragment_list_exam"
+        tools:layout="@layout/fragment_list_exam" >
+        <action
+            android:id="@+id/action_listExamFragment_to_examDetailFragment"
+            app:destination="@id/examDetailFragment" />
+        <action
+            android:id="@+id/action_listExamFragment_to_createExamFragment"
+            app:destination="@id/createExamFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/examDetailFragment"
+        android:name="com.istody.simulei.ui.fragment.ExamDetailFragment"
+        android:label="fragment_exam_detail"
+        tools:layout="@layout/fragment_exam_detail" >
+        <action
+            android:id="@+id/action_examDetailFragment_to_createExamFragment"
+            app:destination="@id/createExamFragment" />
+        <action
+            android:id="@+id/action_examDetailFragment_to_listQuestionFragment"
+            app:destination="@id/listQuestionFragment" />
+        <argument
+            android:name="examId"
+            app:argType="integer" />
+        <argument android:name="folderId"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/createExamFragment"
+        android:name="com.istody.simulei.ui.fragment.CreateExamFragment"
+        android:label="fragment_create_exam"
+        tools:layout="@layout/fragment_create_exam" >
+        <action
+            android:id="@+id/action_createExamFragment_to_createQuestionFragment"
+            app:destination="@id/createQuestionFragment" />
+        <argument
+            android:name="isNew"
+            app:argType="boolean"
+            android:defaultValue="false" />
+        <argument
+            android:name="examId"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="folderId"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+    <fragment
+        android:id="@+id/createQuestionFragment"
+        android:name="com.istody.simulei.ui.fragment.CreateQuestionFragment"
+        android:label="fragment_create_question"
+        tools:layout="@layout/fragment_create_question" />
+    <fragment
+        android:id="@+id/listQuestionFragment"
+        android:name="com.istody.simulei.ui.fragment.ListQuestionFragment"
+        android:label="fragment_list_question"
+        tools:layout="@layout/fragment_list_question" >
+        <argument android:name="examId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_listQuestionFragment_to_questionDetailFragment"
+            app:destination="@id/questionDetailFragment" />
+        <argument android:name="folderId"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/questionDetailFragment"
+        android:name="com.istody.simulei.ui.fragment.QuestionDetailFragment"
+        android:label="fragment_question_detail"
+        tools:layout="@layout/fragment_question_detail" />
+</navigation>

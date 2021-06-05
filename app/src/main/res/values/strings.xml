@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Simulei</string>
+    <string name="folders">Folders</string>
+    <!--    <string name="mock_exams">Mock Exams</string>-->
+    <string name="practice_exams">Practice Exams</string>
+    <string name="all_exams">All Exams</string>
+    <string name="exams">Exams</string>
+    <string name="exam">Exam</string>
+    <string name="practice">Practice</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="folder_icon">Folder Icon</string>
+    <string name="right_arrow">Right Arrow</string>
+    <string name="timer_icon">Timer Icon</string>
+    <string name="start">Start</string>
+    <string name="in_the_last_exam">In the last Exam</string>
+    <string name="percentage_of_correct_answers">Percentage of correct answers</string>
+    <string name="correct_answers">Correct answers</string>
+    <string name="wrong_answers">Wrong answers</string>
+    <string name="improvement_percentage">Improvement percentage</string>
+    <string name="total_average">Total average</string>
+    <string name="new_folder">New Folder</string>
+    <string name="enter_the_folder_name">Enter the folder name</string>
+    <string name="name">Name</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="edit">Edit</string>
+
+</resources>

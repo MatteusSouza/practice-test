@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.fragment.ExamDetailFragment"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/timer_icon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_margin="16dp"
+        android:layout_gravity="center"
+        app:srcCompat="@drawable/ic_baseline_timer_24"
+        android:contentDescription="@string/timer_icon"/>
+
+    <TextView
+        android:id="@+id/timer_clock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        style="@style/TextAppearance.MaterialComponents.Headline1"
+        android:text="@string/example_timer_clock_1" />
+
+    <Button
+        android:id="@+id/button_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="16dp"
+        android:text="@string/start" />
+
+    <TextView
+        android:id="@+id/divider1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Divider" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_gravity="center"
+                style="@style/TextAppearance.MaterialComponents.Headline4"
+                android:text="@string/in_the_last_exam" />
+
+            <TextView
+                android:id="@+id/subtitle1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:layout_gravity="center"
+                style="@style/TextAppearance.MaterialComponents.Body2"
+                android:text="@string/percentage_of_correct_answers" />
+
+            <TextView
+                android:id="@+id/last_correct_percentage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_gravity="center"
+                style="@style/TextAppearance.MaterialComponents.Headline3"
+                android:text="@string/example_last_correct_percentage" />
+
+            <TextView
+                android:id="@+id/subtitle2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:layout_gravity="center"
+                style="@style/TextAppearance.MaterialComponents.Body2"
+                android:text="@string/correct_answers" />
+
+            <TextView
+                android:id="@+id/last_correct_answers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_gravity="center"
+                style="@style/TextAppearance.MaterialComponents.Headline3"
+                android:text="@string/example_last_correct_answers" />
+
+            <TextView
+                android:id="@+id/subtitle3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:layout_gravity="center"
+                style="@style/TextAppearance.MaterialComponents.Body2"
+                android:text="@string/wrong_answers" />
+
+            <TextView
+                android:id="@+id/last_wrong_answers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_gravity="center"
+                style="@style/TextAppearance.MaterialComponents.Headline3"
+                android:text="@string/example_last_wrong_answers" />
+
+            <TextView
+                android:id="@+id/subtitle4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:layout_gravity="center"
+                style="@style/TextAppearance.MaterialComponents.Body2"
+                android:text="@string/improvement_percentage" />
+
+            <TextView
+                android:id="@+id/last_improvement_percentage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_gravity="center"
+                style="@style/TextAppearance.MaterialComponents.Headline3"
+                android:text="@string/example_last_improvement_percentage" />
+
+            <TextView
+                android:id="@+id/divider2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:theme="@style/Divider" />
+
+            <TextView
+                android:id="@+id/title2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_gravity="center"
+                style="@style/TextAppearance.MaterialComponents.Headline4"
+                android:text="@string/total_average" />
+
+            <TextView
+                android:id="@+id/subtitle5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:layout_gravity="center"
+                style="@style/TextAppearance.MaterialComponents.Body2"
+                android:text="@string/percentage_of_correct_answers" />
+
+            <TextView
+                android:id="@+id/total_correct_percentage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_gravity="center"
+                style="@style/TextAppearance.MaterialComponents.Headline3"
+                android:text="@string/example_total_correct_percentage"
+                android:layout_marginBottom="16dp" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
