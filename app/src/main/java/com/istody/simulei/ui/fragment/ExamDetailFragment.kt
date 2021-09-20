@@ -5,15 +5,15 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
-import androidx.navigation.fragment.navArgs
 import com.istody.simulei.databinding.FragmentExamDetailBinding
-import com.istody.simulei.ui.viewmodel.ExamViewModel
+import com.istody.simulei.ui.viewmodel.ListViewModel
 
 class ExamDetailFragment : Fragment() {
 
-    private val viewModel: ExamViewModel by activityViewModels()
+    private val viewModel: ListViewModel by activityViewModels()
     private var _binding: FragmentExamDetailBinding? = null
     private val binding get() = _binding!!
 
@@ -29,10 +29,6 @@ class ExamDetailFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val args: ExamDetailFragmentArgs by navArgs()
-        viewModel.setFolderId(args.folderId)
-        viewModel.setExamId(args.examId)
-
         viewModel.editButtonVisibility(true)
 
         viewModel.editButtonClick {
@@ -46,12 +42,13 @@ class ExamDetailFragment : Fragment() {
         }
 
         binding.buttonStart.setOnClickListener {
-            val action = ExamDetailFragmentDirections
-                .actionExamDetailFragmentToListQuestionFragment(
-                    examId = viewModel.getExamId(),
-                    folderId = viewModel.getFolderId()
-                )
-            findNavController().navigate(action)
+            Toast.makeText(activity, "Start button was clicked", Toast.LENGTH_SHORT).show()
+//            val action = ExamDetailFragmentDirections
+//                .actionExamDetailFragmentToListQuestionFragment(
+//                    examId = viewModel.getExamId(),
+//                    folderId = viewModel.getFolderId()
+//                )
+//            findNavController().navigate(action)
         }
 
     }

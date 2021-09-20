@@ -5,36 +5,45 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import androidx.activity.viewModels
+import com.istody.simulei.App
 import com.istody.simulei.R
+import com.istody.simulei.databinding.ActivityMainBinding
 import com.istody.simulei.ui.fragment.*
-import com.istody.simulei.ui.viewmodel.ExamViewModel
-import com.istody.simulei.ui.viewmodel.ListViewModel
-import com.istody.simulei.ui.viewmodel.PracticeViewModel
+import com.istody.simulei.ui.viewmodel.*
 
 class MainActivity : AppCompatActivity(), ToolbarListener {
 
-//    private val baseViewModel: BaseViewModel by viewModels()
-    private val listViewModel: ListViewModel by viewModels()
-    private val examViewModel: ExamViewModel by viewModels()
-    private val practiceViewModel: PracticeViewModel by viewModels()
+    private lateinit var binding: ActivityMainBinding
+
+    private val listViewModel: ListViewModel by viewModels {
+        ListViewModelFactory(
+            (application as App).folderRepository,
+            (application as App).examRepository
+        )
+}
+    private val examViewModel: ExamViewModel by viewModels {
+        ExamViewModelFactory(
+            (application as App).questionRepository,
+            (application as App).answerRepository
+        )
+    }
+//    private val practiceViewModel: PracticeViewModel by viewModels()
 
     private var toolbarEditButton : MenuItem? = null
     private var editButtonClick: (() -> Unit)? = null
 
-//    var navCount: Int = 0 //Navigate Counter
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         // Refactor
         listViewModel.toolbarSupport = this
         examViewModel.toolbarSupport = this
-        practiceViewModel.toolbarSupport = this
+//        practiceViewModel.toolbarSupport = this
 
-        setSupportActionBar(findViewById(R.id.toolbar))
-
+        setSupportActionBar(binding.toolbar)
         upHomeButton(true)
-
     }
 
     private fun upHomeButton(option: Boolean){

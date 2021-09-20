@@ -28,23 +28,23 @@ class ListQuestionFragment : Fragment() {
         return binding.root
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        val args: ListQuestionFragmentArgs by navArgs()
-
-        viewModel.setFolderId(args.folderId)
-        viewModel.setExamId(args.examId)
-
-        val questionQuantity = " 0 / ${viewModel.getQuestionList().size} "
-        binding.answeredQuestions.text = questionQuantity
-
-        binding.recyclerViewQuestion.layoutManager = LinearLayoutManager(activity)
-        binding.recyclerViewQuestion.adapter = QuestionAdapter(viewModel.getQuestionList()
-        ) {
-                itemID -> itemClick(itemID)
-        }
-    }
+//    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+//        super.onViewCreated(view, savedInstanceState)
+//
+//        val args: ListQuestionFragmentArgs by navArgs()
+//
+//        viewModel.setFolderId(args.folderId)
+//        viewModel.setExamId(args.examId)
+//
+//        val questionQuantity = " 0 / ${viewModel.getQuestionList().size} "
+//        binding.answeredQuestions.text = questionQuantity
+//
+//        binding.recyclerViewQuestion.layoutManager = LinearLayoutManager(activity)
+//        binding.recyclerViewQuestion.adapter = QuestionAdapter(viewModel.getQuestionList()
+//        ) {
+//                itemID -> itemClick(itemID)
+//        }
+//    }
 
     override fun onDestroy() {
         super.onDestroy()

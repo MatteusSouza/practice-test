@@ -3,7 +3,7 @@ package com.istody.simulei.ui.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.istody.simulei.data.Question
+import com.istody.simulei.data.model.Question
 import com.istody.simulei.databinding.ItemQuestionBinding
 
 class QuestionAdapter(

@@ -19,29 +19,29 @@ class QuestionDetailFragment : Fragment() {
     private var _binding: FragmentQuestionDetailBinding? = null
     private val binding get() = _binding!!
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-        _binding = FragmentQuestionDetailBinding.inflate(inflater, container, false)
-
-        val questionId = viewModel.getQuestionId()
-        val questionNumber = "Question ${questionId.plus(1)}"
-        val questionStatement = viewModel.getQuestionList()[questionId].question
-
-        val answerList = viewModel.getQuestionList()[questionId].answerList
-
-        binding.questionNumber.text = questionNumber
-        binding.statementQuestion.text = ""
-        binding.source.text = ""
-        binding.question.text = questionStatement
-
-        binding.recyclerViewAnswer.layoutManager = LinearLayoutManager(activity)
-        binding.recyclerViewAnswer.adapter = AnswerAdapter(answerList){
-            itemID -> itemClick(itemID)
-        }
-        return binding.root
-    }
+//    override fun onCreateView(
+//        inflater: LayoutInflater, container: ViewGroup?,
+//        savedInstanceState: Bundle?
+//    ): View {
+//        _binding = FragmentQuestionDetailBinding.inflate(inflater, container, false)
+//
+//        val questionId = viewModel.getQuestionId()
+//        val questionNumber = "Question ${questionId.plus(1)}"
+//        val questionStatement = viewModel.getQuestionList()[questionId].question
+//
+//        val answerList = viewModel.getQuestionList()[questionId].answerList
+//
+//        binding.questionNumber.text = questionNumber
+//        binding.statementQuestion.text = ""
+//        binding.source.text = ""
+//        binding.question.text = questionStatement
+//
+//        binding.recyclerViewAnswer.layoutManager = LinearLayoutManager(activity)
+//        binding.recyclerViewAnswer.adapter = AnswerAdapter(answerList){
+//            itemID -> itemClick(itemID)
+//        }
+//        return binding.root
+//    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

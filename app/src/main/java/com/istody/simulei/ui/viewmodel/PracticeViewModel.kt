@@ -12,10 +12,10 @@ class PracticeViewModel : BaseViewModel() {
 //        examId = getExamId()
 //    )
 
-    fun getQuestionList(): List<Question> {
-        return getExampleQuestionList(
-            folderId = getFolderId(),
-            examId = getExamId()
-        )
-    }
+//    fun getQuestionList(): List<Question> {
+//        return getExampleQuestionList(
+//            folderId = getFolderId(),
+//            examId = getExamId()
+//        )
+//    }
 }

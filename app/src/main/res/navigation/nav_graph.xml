@@ -36,11 +36,6 @@
         <action
             android:id="@+id/action_examDetailFragment_to_listQuestionFragment"
             app:destination="@id/listQuestionFragment" />
-        <argument
-            android:name="examId"
-            app:argType="integer" />
-        <argument android:name="folderId"
-            app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/createExamFragment"
@@ -67,7 +62,11 @@
         android:id="@+id/createQuestionFragment"
         android:name="com.istody.simulei.ui.fragment.CreateQuestionFragment"
         android:label="fragment_create_question"
-        tools:layout="@layout/fragment_create_question" />
+        tools:layout="@layout/fragment_create_question" >
+        <argument
+            android:name="isNewQuestion"
+            app:argType="boolean" />
+    </fragment>
     <fragment
         android:id="@+id/listQuestionFragment"
         android:name="com.istody.simulei.ui.fragment.ListQuestionFragment"

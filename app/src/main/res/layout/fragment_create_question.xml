@@ -38,14 +38,14 @@
                 android:id="@+id/statement_question"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/example_statement_question"
+                android:hint="@string/example_statement_question"
                 style="@style/TextAppearance.MaterialComponents.Headline6" />
 
             <EditText
                 android:id="@+id/source"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/example_source"
+                android:hint="@string/example_source"
                 android:textAlignment="viewEnd"
                 android:gravity="end"/>
         </LinearLayout>
@@ -73,8 +73,9 @@
                 android:id="@+id/question"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:theme="@style/TextAppearance.MaterialComponents.Body1"
-                android:text="@string/example_question" />
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                android:hint="@string/example_question"
+                />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recycler_view_answer"
@@ -94,6 +95,19 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_margin="16dp"
+        app:srcCompat="@drawable/ic_baseline_add_24"
+        android:contentDescription="TODO" />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/fabSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="16dp"
+        android:text="@string/save"
+        android:gravity="center_horizontal"
         app:srcCompat="@drawable/ic_baseline_add_24"
         android:contentDescription="TODO" />
 

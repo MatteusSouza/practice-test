@@ -3,12 +3,17 @@ package com.istody.simulei.ui.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.istody.simulei.data.Answer
-import com.istody.simulei.data.Exam
-import com.istody.simulei.data.Question
+import com.istody.simulei.data.model.Answer
 import com.istody.simulei.databinding.ItemAnswerBinding
 
-class CreateAnswerAdapter(val data: List<Answer>) : RecyclerView.Adapter<CreateAnswerAdapter.CreateAnswerViewHolder>() {
+class CreateAnswerAdapter(
+    private var data: List<Answer> = mutableListOf()
+    ) : RecyclerView.Adapter<CreateAnswerAdapter.CreateAnswerViewHolder>() {
+
+    fun setData(thisData: List<Answer>) {
+        data = thisData
+        this.notifyDataSetChanged()
+    }
 
     inner class CreateAnswerViewHolder(
         val binding : ItemAnswerBinding
